@@ -1,0 +1,38 @@
+.table{
+    text-align: center;
+    justify-content: center;
+    margin: 20px 300px;
+    position:absolute;
+    background-color: whitesmoke;
+}
+.thead{
+    width: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+}
+
+.tbody{
+    font-size: small;
+    width: 25px;
+    align-items: center;
+    text-align: center;
+    background-color: thistle;
+}
+.head{
+    width: 100px;
+    text-align: center;
+justify-content: center;
+     font-size: large;
+    
+}
+
+.search{
+    display:block;
+    position:relative;
+    width: 100%;
+    
+    margin:auto;
+    top: 140px;
+   
+    
+}
