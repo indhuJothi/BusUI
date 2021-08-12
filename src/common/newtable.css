@@ -1,0 +1,24 @@
+.table{
+text-align: center;
+justify-content: center;
+margin: 120px 380px;
+position:absolute;
+width:30%;
+background-color: whitesmoke;
+}  
+
+.thead{
+    width: 30px;
+    height: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+}   
+
+.tbody{
+    font-size: small;
+    width: 25px;
+    align-items: center;
+    height:50px;
+    text-align: center;
+    background-color: thistle;
+}

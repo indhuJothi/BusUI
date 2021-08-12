@@ -5,6 +5,7 @@ import './search.css'
 // import Calender from './calender';
 import TravelTable from './traveltabel';
 import ReactDOM from 'react-dom';
+import Tabledata from '../user/tabledata';
 
 class Search extends React.Component{
     constructor(){
@@ -29,8 +30,10 @@ class Search extends React.Component{
      this.setState ({
          
          value:e.target.value
+     
         
-     });
+     })
+     
 
     }
     ShowtoValue(e)
@@ -74,28 +77,28 @@ class Search extends React.Component{
             <div class='searchContainer'>
               <div class='FromCol'>
                 
-               <label > From <select  class='From'  value= {this.state.value} onChange={this.showSource}>
+              <label > From <select  class='From'  value= {this.state.value} onChange={this.showSource}>
                             <Item/>
-                       </select> 
+                     </select> 
               </label> 
                 
-                 <label> To <select   class='From' value= {this.state.tovalue} onChange={this.ShowtoValue}>
+              <label> To <select   class='From' value= {this.state.tovalue} onChange={this.ShowtoValue}>
                          <To/>
-                     </select> </label> 
-                     <div class="date">
-                   <input type='text' class='From' value={this.state.date} placeholder= "Date" onFocus={this.date}></input>
-                    <button class='From' onClick={this.showTable}>Search</button>
-                     </div>
-                      {this.state.visible ?<input type="date" class="child" onChange={this.dateChange}></input>: null}
+                     </select> 
+                </label>
+                <label>Date<input type='text' class='frominput'value={this.state.date} placeholder = "Date" onFocus={this.date}></input>
+               
+           </label>  <button class='buttonclass' onClick={this.showTable}>Search</button>
+   
+             </div>
+              <div>
+                    {this.state.visible ?<input type="date" class="child" onChange={this.dateChange}></input>: null}
                     </div>
                 
-                {this.state.button ? <TravelTable value={value} tovalue={tovalue} date={date}/>:null}
+                {this.state.button ? <Tabledata value={value} tovalue={tovalue} date={date}/>:null}
            
-         </div>
-      
-               
-         
-         </div>
+          </div>
+        </div>
         )
     }
 }

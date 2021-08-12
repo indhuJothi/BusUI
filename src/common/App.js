@@ -1,6 +1,6 @@
 import React from "react";
-import "./components/login/logreg.css";
-import { Login, Signup } from "./components/login/index";
+import "./logreg.css";
+import { Login, Signup } from "./index";
 import Main from "./main";
 class App extends React.Component{
   constructor(props)
@@ -9,9 +9,7 @@ class App extends React.Component{
     {
       this.state={
        isLogin : true
-   
-       
-      }
+       }
     this.handle =this.handle.bind(this)
     this.handleSignup=this.handleSignup.bind(this)
    
@@ -25,10 +23,7 @@ class App extends React.Component{
      
          { 
          isLogin : true
-         
-
-         
-      }
+         }
     )
   }
   handleSignup(){
@@ -44,7 +39,7 @@ class App extends React.Component{
     const isLogin = this.state.isLogin
     
     return(
-      <iframe>
+    
       <div>
 
     <div class='MainContainer center'>
@@ -54,10 +49,11 @@ class App extends React.Component{
      {isLogin?<Login/>:<Signup/>}
      </div>
      </div>
-    
+     
       </div>
-      </iframe>
+    
 
+      
      
     )
   }

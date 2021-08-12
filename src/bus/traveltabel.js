@@ -1,5 +1,5 @@
 import React from 'react'
-import '../table/table.css'
+import '../user/table.css'
 // import './traveltable.css'
 import SelectSeat from './selectseat'
 

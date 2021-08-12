@@ -1,0 +1,63 @@
+ .booktable{
+    width :40%;
+    margin: 100px 350px;
+    display: block;
+    background-color:snow;
+    text-align: center;
+    justify-content: center;
+}
+/* 
+.myseat{
+    width: 25px;
+    height: 35px;
+
+    background-color:red;
+}
+ .seat{
+    position: absolute;
+    height: 25px;
+    display: inline;
+    width: 25px;
+    background-color:green;
+
+ } */
+
+
+ .main {
+    display: inline;
+    position: relative;
+    margin: 1px 5px;
+    padding-left: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    font-size: 20px;
+}
+ 
+input[type=checkbox] {
+    visibility: hidden;
+}
+  
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    flex-direction:row;
+    background-color:green;
+}
+  
+
+
+.main input:checked ~ .checkmark {
+    background-color:red;
+}
+  
+
+
+.main input:checked ~ .checkmark:after {
+    display: block;
+}
+  

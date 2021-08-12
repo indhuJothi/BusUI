@@ -1,28 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Main from './main';
-// import App from './App';
-// import App from './App'
-// import reportWebVitals from './reportWebVitals';
-// import Table from './table/table';
-// import Main from './main'
-import Search from './search/search'
-import App from '../src/search/selectseat'
+// import Main from '../src/common/main';
+// import Menu from '../src/common/route';
 
+
+import BookTicket from '../src/common/bookticket'
 
 ReactDOM.render(
   <React.StrictMode>
-  {/* <App/>
-  <Table/> */}
-  <App/>
-  {/* <Search/> */}
-  <Main/>
+   {/* <Main/> */}
+  {/* <Menu /> */}
+  <BookTicket/>
   </React.StrictMode>,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();

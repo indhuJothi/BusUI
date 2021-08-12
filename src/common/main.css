@@ -1,0 +1,42 @@
+.body{
+ width:100%;
+ /* margin : auto 300px; */
+ position:absolute;
+ box-sizing: border-box;
+ display: block;
+
+}
+
+.header{
+    background-color:skyblue;
+    width: 100%
+}
+/* .name{
+    position:relative;
+    left:90%;
+    size: 25px;
+} */
+
+.apptitle{
+    
+    color: purple;
+    font-size: large;
+    font-weight: bold;
+}
+.logobut{
+    position:relative;
+    left:75%;
+    margin-top: 0px;
+    size:10px;
+}
+
+.signuplogo{
+    width: 50px;
+    position: relative;
+}
+/* .table{
+  position: relative;
+  left :70px;
+  top: 50px;
+  
+} */

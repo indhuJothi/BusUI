@@ -100,7 +100,8 @@ export default class App extends Component {
             tooltipProps={{multiline: true}}
           />
         </div>
-        <h1>Seat Picker Continuous Case</h1>
+        <div></div>
+        {/* <h1>Seat Picker Continuous Case</h1>
         <div style={{ marginTop: '100px' }}>
           <SeatPicker
             addSeatCallback={this.addSeatCallbackContinousCase}
@@ -114,7 +115,7 @@ export default class App extends Component {
             tooltipProps={{ multiline: true }}
             continuous
           />
-        </div>
+        </div> */}
       </div>
     )
   }

@@ -1,31 +1,5 @@
-// import React from 'react'
-// // import 'login.css'
-
-// class Signup extends React.Component{
-//     constructor(props){
-//         super(props);
-
-//     }
-
-
-//     render(){
-//         return(
-//             <div>
-//                 <form>
-//                     <label>Email: <input type='text' value="enter your email"/><br></br></label>
-//                    <label>Mobile: <input type='text' value="MobileNum"></input><br></br></label>
-//                    <label>Password: <input type ="password"></input><br/></label>
-//                     <label>Confirm Password: <input type='password'/></label>
-//                 </form>
-//             </div>
-//         )
-//     }
-// }
-
-// export default Signup
 import React from "react";
-// import loginImg from "../../login.svg";
-import '../login/logreg.css'
+import './logreg.css'
  export class Signup extends React.Component {
   constructor(props) {
     super(props);

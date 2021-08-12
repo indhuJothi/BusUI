@@ -1,0 +1,29 @@
+.li{
+list-style-type: none;
+
+}
+
+.link{
+    text-decoration: none;
+}
+.link:active{
+    color:violet;
+    background-color:turquoise;
+}
+
+.App{
+    /* background-color: aliceblue; */
+    width: 170px;
+    background-color:snow;
+    position: fixed;
+    top: 9.5%;
+    height: 100%;
+}
+
+.welcome{
+    width: 300%;
+    color: goldenrod;
+    margin: 4px 500px;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
