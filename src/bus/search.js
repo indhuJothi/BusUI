@@ -2,11 +2,9 @@ import React from 'react'
 import Item from './listitems';
 import To from './to';
 import './search.css'
-// import Calender from './calender';
-import TravelTable from './traveltabel';
-import ReactDOM from 'react-dom';
+// import TravelTable from './traveltabel';
 import Tabledata from '../user/tabledata';
-
+let date
 class Search extends React.Component{
     constructor(){
         super();
@@ -15,7 +13,8 @@ class Search extends React.Component{
             value:" ",
             tovalue: '',
             date: " ",
-            button:false
+            button:false,
+            showsearch: true
 
         }
         this.showSource = this.showSource.bind(this)
@@ -51,17 +50,15 @@ class Search extends React.Component{
         })
       }
     dateChange(e){
-        this.setState({
-            date : e.target.value,
-            visible : false
-        })
+      date = e.target.value
     }
 
     showTable(){
 
         
         this.setState({
-            button:true
+            button:true,
+            showsearch:false
         })
     }
 
@@ -71,10 +68,10 @@ class Search extends React.Component{
    
         const value = this.state.value;
         const tovalue= this.state.tovalue;
-        const date = this.state.date
+        
         return(
-            <div>
-            <div class='searchContainer'>
+          <div>
+            {this.state.showsearch?<div class='searchContainer'>
               <div class='FromCol'>
                 
               <label > From <select  class='From'  value= {this.state.value} onChange={this.showSource}>
@@ -85,19 +82,11 @@ class Search extends React.Component{
               <label> To <select   class='From' value= {this.state.tovalue} onChange={this.ShowtoValue}>
                          <To/>
                      </select> 
-                </label>
-                <label>Date<input type='text' class='frominput'value={this.state.date} placeholder = "Date" onFocus={this.date}></input>
-               
-           </label>  <button class='buttonclass' onClick={this.showTable}>Search</button>
-   
-             </div>
-              <div>
-                    {this.state.visible ?<input type="date" class="child" onChange={this.dateChange}></input>: null}
-                    </div>
-                
-                {this.state.button ? <Tabledata value={value} tovalue={tovalue} date={date}/>:null}
-           
-          </div>
+             </label>
+            <label>Date<input type='date' class='frominput' placeholder = "Date" onChange={this.dateChange}></input> 
+           </label>  <button class='buttonclass' onClick={this.showTable}>Search</button></div>
+            </div>: null }
+          {this.state.button ? <Tabledata value={value} tovalue={tovalue} date={date}/>:null}
         </div>
         )
     }

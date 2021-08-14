@@ -1,6 +1,7 @@
 import React from 'react'
 import './bookticket.css'
 import ShowTicket from './showticket'
+import { BrowserRouter as Router, Route, Link, Switch, Redirect } from 'react-router-dom';
 class BookTicket extends React.Component{
 
   constructor(){
@@ -8,7 +9,8 @@ class BookTicket extends React.Component{
     {
       this.state={
         values:[],
-        showticket :false
+        showticket :false,
+        letsshow : true
       }
       this.getvalue=this.getvalue.bind(this)
       this.validate = this.validate.bind(this)
@@ -31,20 +33,54 @@ class BookTicket extends React.Component{
 validate(e){
   e.preventDefault();
 this.setState({
-  showticket:true
+  showticket:true,
+  letsshow:false
 })
+
 }
 
   render()
   {
+  let data =this.props.value
+  let seats
+  let availableSeat =  data.filter(function(element){
+           seats= element.availableseats
+           return data
+  })
+  console.log(seats)
+     let seatslength=[]
+     for(let i=0;i<seats;i++){
+         seatslength.push(i)
+     }
+     console.log(seatslength)
     const arr= this.state.values
     return(
-
+      <div>
+    {this.state.letsshow?  <div  class='booktable'>
+      { seatslength.map(element=>{
+        console.log("hi")
+        if(element%2==0)
+        return <label class="main"><input type="checkbox" value={element+1} onClick={this.getvalue}/><span class="checkmark"></span></label>
+       else
+        return<label class="main"><input type="checkbox" checked="checked" value={element+1} onClick={this.getvalue}/><span class="checkmark"></span></label>
+        
+      }
+ 
+          )}
+           <button type='submit' onClick={this.validate}>Book Seats</button>
+           </div> : null}
+      {this.state.showticket? <Router>
+    <Link to='/'></Link>
+  <Link to='/show-ticket'/>
+ <Route path='/'><Redirect to='/show-ticket'></Redirect></Route>
+   <Route path="/show-ticket" render={() => <ShowTicket  value={arr}/>} /></Router> : null}
+      
+       </div>)}}
     
-<div >
-<form class='booktable' >
+{/* <div >
+{this.state.letsshow? <form class='booktable' >
 <div>
-  
+ 
 <div>
 	<label class="main"><input type="checkbox" value='1' onClick={this.getvalue}/><span class="checkmark"></span></label>
 	<label class="main"><input type="checkbox" checked="checked" value='2' onClick={this.getvalue}/><span class="checkmark"></span></label>
@@ -66,24 +102,26 @@ this.setState({
   <label class="main"><input type="checkbox"value='11'onClick={this.getvalue}/><span class="checkmark"></span></label>
   <label class="main"><input type="checkbox"value='12'onClick={this.getvalue}/><span class="checkmark"></span></label>
   </div>
-  <div>
-  <label class="main"><input type="checkbox" value='13'onClick={this.getvalue}/><span class="checkmark"></span></label>
-  <label class="main"><input type="checkbox"value='14'onClick={this.getvalue}/><span class="checkmark"></span></label>
-  <label class="main"><input type="checkbox"value='15' onClick={this.getvalue} checked='checked'/><span class="checkmark"></span></label>
-  <label class="main"><input type="checkbox"value='16'onClick={this.getvalue}/><span class="checkmark"></span></label>
-  </div>
+  
+  <button type='submit' onClick={this.validate}>Book Seats</button>
  
-  </div>
-<button type='submit' onClick={this.validate}/>
 
-  </form>
-  {this.state.showticket? <ShowTicket value={arr}/> : null}
+  
+  </div>
+   
+
+  </form> : null}
+  {this.state.showticket? <Router>
+    <Link to='/'></Link>
+  <Link to='/show-ticket'/>
+ <Route path='/'><Redirect to='/show-ticket'></Redirect></Route>
+   <Route path="/show-ticket" render={() => <ShowTicket  value={arr}/>} /></Router> : null}
 </div>
 
   
     )
   }
-}
+} */}
 
 
 

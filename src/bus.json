@@ -1,0 +1,40 @@
+{
+    "bus":[
+        {
+            "busno" : "TN543",
+            "busname": "Red Bus",
+            "from":"Chennai",
+            "to":"Madurai",
+            "fare": 150,
+            "type": "2s",
+            "no-of-seats":"16"
+        },
+        {
+            "busno" : "TN544",
+            "busname": "Blue Bus",
+            "from":"Madurai",
+            "to":"chennai",
+            "fare": 180,
+            "type": "sleeper Ac",
+            "no-of-seats":"12"
+        },
+        {
+            "busno" : "TN545",
+            "busname": "Green Bus",
+            "from":"Madurai",
+            "to":"Trichy",
+            "fare": 200,
+            "type": "sleeper Non-Ac",
+            "no-of-seats":"14"
+        },
+        {
+            "busno" : "TN546",
+            "busname": "Purple Bus",
+            "from":"Trichy",
+            "to":"Chennai",
+            "fare": 160,
+            "type": "2s Ac",
+            "no-of-seats":"14"
+        }
+    ]
+}

@@ -2,6 +2,7 @@ import React from 'react'
 import '../user/table.css'
 // import './traveltable.css'
 import SelectSeat from './selectseat'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 
 
@@ -114,7 +115,7 @@ showseats(){
                    <td>Purple Bus</td>
                    <td>150</td>
                    <button onClick={this.showseats}>Book Seats</button>
-                   {this.state.isBook ? <SelectSeat/>: null}
+                   {this.state.isBook ?	<Route exact path='/book-seat' component={SelectSeat}></Route>: null}
                </tr> : null
    }
    

@@ -1,10 +1,12 @@
  .booktable{
-    width :40%;
-    margin: 100px 350px;
+    width :350px;
+    margin-top: 150px;
+    margin-left:  500px;
     display: block;
-    background-color:snow;
+    background-color: honeydew;
     text-align: center;
     justify-content: center;
+    position:absolute;
 }
 /* 
 .myseat{
@@ -24,11 +26,13 @@
 
 
  .main {
-    display: inline;
+    display: inline-block;
     position: relative;
-    margin: 1px 5px;
+    margin: 1px 4px;
+    width: 4%;
     padding-left: 10px;
-    margin-bottom: 5px;
+    /* margin-bottom: 1px; */
+   
     cursor: pointer;
     font-size: 20px;
 }

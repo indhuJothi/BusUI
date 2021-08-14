@@ -1,7 +1,5 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import '../index.css'
-// import App from './App';
 import logo from'../signlogo.jpg'
 import './main.css'
 import App from './App'
@@ -10,8 +8,8 @@ import Historytable from '../user/historytable';
 import Search from '../bus/search';
 
 class Main extends React.Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
            component : false,
            othercomponent:true
@@ -35,18 +33,21 @@ class Main extends React.Component{
 
 
     render(){
+        let userloggedin = this.props.userloggedin
+        console.log(userloggedin)
         return(
             <div class="body">
                
             <div class='header'>   
             <span class='apptitle'>Bus Booking App</span>     
-                     <a class='logobut'  onClick={this.change} >
-                     {/* < p class='name'> */}
-                        <img src={logo} class='signuplogo' ></img>
-                        {this.state.isLogin ? 'Indhu': null} 
-                     </a>
+                   
                     
                      </div> 
+                     <a class='logobut'  onClick={this.change} >
+                        <img src={logo}   class='signuplogo' ></img> {userloggedin ? 'Indhu': null} 
+                       
+                     </a>
+                     {/* {userloggedin ? 'Indhu': null}  */}
                      
                 
              
